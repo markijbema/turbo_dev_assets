@@ -1,6 +1,7 @@
 require "turbo_dev_assets/version"
 
-# this class cheats and bypasses rails altogether if the client attme
+# this class cheats and bypasses rails altogether if the client attempts
+# to download a static asset
 class TurboDevAssets
   def initialize(app, settings={})
     @app = app
