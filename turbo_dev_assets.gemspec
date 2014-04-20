@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{A gem to speed up asset serving in development in Rails.}
   spec.description   = %q{}
   spec.homepage      = ""
-  spec.license       = "GPL"
+  spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
