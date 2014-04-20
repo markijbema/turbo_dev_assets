@@ -1,20 +1,34 @@
 # TurboDevAssets
 
 A gem to speed up asset serving in development in Rails.
+When you use this middleware, all asset requests will bypass your
+application and all other middlewares, and go straight to the
+asset pipeline.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'turbo_dev_assets'
+```ruby
+gem 'turbo_dev_assets'
+```
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
-## Usage
+Then add to the end of the config block in development.rb:
 
-TODO: Write usage instructions here
+```ruby
+YourApplication.configure do
+
+  # ... other settings
+
+  config.middleware.insert 0, TurboDevAssets
+end
+```
 
 ## Contributing
 
