@@ -17,7 +17,7 @@ class TurboDevAssets
   end
 
   def call(env)
-    is_asset = (env['REQUEST_PATH'] =~ /^\/assets\//)
+    is_asset = (env['REQUEST_PATH'] =~ /^#{Rails.application.config.assets.prefix}\//)
 
     # hack to bypass all middleware if serving assets, a lot faster 4.5 seconds -> 1.5 seconds
     if (etag = env['HTTP_IF_NONE_MATCH']) && is_asset
