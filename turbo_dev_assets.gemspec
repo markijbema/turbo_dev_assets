@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["markijbema@gmail.com"]
   spec.summary       = %q{A gem to speed up asset serving in development in Rails.}
   spec.description   = %q{}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/markijbema/turbo_dev_assets"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
